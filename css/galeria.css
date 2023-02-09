@@ -1,0 +1,292 @@
+
+
+@font-face {
+  font-family: 'ReklameScript-Regular';
+  src: url('../fonts/ReklameScript-Regular.otf');
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	background: linear-gradient(-45deg, #000000, #041122, #000000);
+ 
+}
+
+
+.bg-body-tertiary {
+  --bs-bg-opacity: 0.3;
+  }
+
+.todo{
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+	background: linear-gradient(-45deg, #000000, #041122, #000000);
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  animation: BackgroundGradient 15s ease infinite;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.menu{
+  justify-content: end;
+  padding-right: 60px;
+}
+
+
+.navbar-nav{
+  font-size: 22px;
+  font-family: 'ReklameScript-Regular';
+  letter-spacing: 0.8px;
+}
+
+
+.nav-item{
+  font-size: 25px;
+  width: 180px;
+  text-align: center;
+}
+
+#menu{
+    color: #000;
+    background-image: url(../media/pleca.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-family: 'ReklameScript-Regular';
+    text-aling: center;
+    font-size: 22px;
+}
+
+#menu:hover{
+  transform: scale(1.1);
+}
+
+
+
+a {
+	text-decoration: none;
+}
+
+
+.contenedor {
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+}
+
+/* ------------------------- */
+/* HEADER */
+/* ------------------------- */
+
+header {
+	padding: 40px 0;
+}
+
+.logo-header{
+	text-align: center;
+}
+
+.logo-header img{
+	width: 150px;
+}
+
+
+
+header .categorias {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+header .categorias a {
+	color: #9B9B9B;
+	margin: 10px 20px;
+	font-size: 35px;
+	font-family: 'ReklameScript-Regular';
+  letter-spacing: 0.1rem;
+}
+
+header .categorias a:hover{
+	color: #f6bc00;
+	text-decoration: underline;
+	text-decoration-color: #f6bc00;
+}
+
+header .categorias a.activo {
+	color: #f6bc00;
+	letter-spacing: 0.1rem;
+}
+
+
+/* ------------------------- */
+/* Grid */
+/* ------------------------- */
+
+.grid {
+	position: relative;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 0.5s linear 1s;
+}
+
+.grid.imagenes-cargadas {
+	opacity: 1;
+}
+
+.grid .item {
+	position: absolute;
+	display: block;
+	padding: 0;
+	margin: 10px;
+	width: calc(25% - 20px);
+}
+
+.grid .item-contenido {
+	position: relative;
+}
+
+.grid .item img {
+	width: 100%;
+	cursor: pointer;
+	vertical-align: top;
+}
+
+/* ------------------------- */
+/* Overlay */
+/* ------------------------- */
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.9);
+	width: 100%;
+	height: 100vh;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.overlay.activo {
+	display: flex;
+}
+
+.overlay img {
+	max-width: 100%;
+}
+
+.overlay .descripcion {
+	display: block;
+	background: #020a14;
+	padding: 20px;
+	text-align: center;
+	margin-top: 5px;
+	border-radius: 10px;
+	max-width: 50%;
+	color: #e6ba14;
+}
+
+
+.contenedor-img {
+	position: relative;
+}
+
+.overlay #btn-cerrar-popup {
+	background: none;
+	font-size: 20px;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	right: -20px;
+	top: -20px;
+}
+
+/* ------------------------- */
+/* Boton up */
+/* ------------------------- */
+
+
+.btn-flotante svg{
+	color: #f6bc00; 
+	opacity: 0.5;
+	position: fixed;
+	bottom: 40px;
+	right: 20px;
+	transition: all 300ms ease 0ms;
+	z-index: 99;
+}
+.btn-flotante svg:hover {
+	opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+ 	.btn-flotante {
+		font-size: 14px;
+		padding: 12px 20px;
+		bottom: 20px;
+		right: 20px;
+	}
+}
+
+
+
+
+
+/* ------------------------- */
+/* Footer */
+/* ------------------------- */
+
+footer{
+	background-color: #000;
+	margin-top: 30px;
+}
+
+.redes{
+  text-align: center;
+  color: #ddd;
+  font-size: 55px;
+}
+
+.redes a{
+  color: #ddd;
+  text-decoration: none;
+}
+
+
+.redes svg:hover{
+  -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+   margin: 10px;
+   color: #f6bc00;
+}
+
+/* ------------------------- */
+/* Mediaqueries */
+/* ------------------------- */
+@media screen and (max-width: 700px) {
+	.grid .item {
+		width: calc(50% - 20px);
+	}
+ header .categorias a {
+	color: #9B9B9B;
+	margin: 10px 20px;
+	font-size: 25px;
+	font-family: 'ReklameScript-Regular';
+  letter-spacing: 0.1rem;
+}
+
+}
